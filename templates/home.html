@@ -1,7 +1,7 @@
 <!-- templates/home.html -->
 {% extends "base.html" %}
 {% block content %}
-{% for blog in blog_list %}
+{% for post in post_list %}
  <div class="post-entry">
  <h2><a href="">{{ post.title }}</a></h2>
  <p>{{ post.body }}</p>
