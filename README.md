@@ -1,7 +1,7 @@
 ## STEPS IN SUMMARY
-### iNITIAL SETUP
+### INITIAL SETUP
 #### 1. Create a folder.
-cd root/
+cd root/\n
 mkdir {folder name}
 #### 2. Create a virtual environment.
 cd {created folder}
