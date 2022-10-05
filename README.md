@@ -70,3 +70,7 @@ from django.urls import path
 #import views existing in the same folder.  
 from .views import BlogListView  
 urlpatterns = [path("", BlogListView.as_view(), name="home"),]  
+#django_project/urls.py  
+from django.contrib import admin  
+from django.urls import path, include  
+urlpatterns = [path("admin/", admin.site.urls),path("", include("blog.urls")),]  
