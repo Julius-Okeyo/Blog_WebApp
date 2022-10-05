@@ -54,7 +54,7 @@ python manage.py createsuperadmin
 Update {app name}/admin.py.  
 example:  
 #blog/admin.py  
-from django.contrib import admin 
+from django.contrib import admin  
 #import our subclass of models.Model   
 from .models import Post  
 #Register the subclass  
