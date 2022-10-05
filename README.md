@@ -26,3 +26,24 @@ Open django_project/settings.py in text editor and insert path to
 new app's Config class accessible through {app name}/apps.py.
 #### 7. Perform migration to create database.
 python manage.py migrate
+#### 8. Create a database model.
+example:  
+# blog/models.py
+from django.db import models  
+from django.urls import reverse  
+
+#Post is a subclass of models.Model  
+class Post(models.Model):  
+    #The class declares the database columns necessary  
+    title = models.CharField(max_length=200)  
+    author = models.ForeignKey(  
+            "auth.User",  
+            on_delete=models.CASCADE,  
+            )  
+    body = models.TextField()  
+    def __str__(self):  
+        return self.title  
+    def get_absolute_url(self):  
+        return reverse("post_detail", kwargs={"pk": self.pk})  
+
+
