@@ -49,6 +49,13 @@ class Post(models.Model):
 #### Create a migration file and migrate database model created. 
 python manage.py makemigrations  
 python manage.py migrate  
-
-
-
+#### Create superadmins.
+python manage.py createsuperadmin  
+Update {app name}/admin.py.  
+example:  
+#blog/admin.py  
+from django.contrib import admin 
+#import our subclass of models.Model   
+from .models import Post  
+#Register the subclass  
+admin.site.register(Post)  
