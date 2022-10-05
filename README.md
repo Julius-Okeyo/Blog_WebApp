@@ -59,3 +59,14 @@ from django.contrib import admin
 from .models import Post  
 #Register the subclass  
 admin.site.register(Post)  
+#### URLS
+Create {app name}/urls.py  
+Configure django_project/urls.py and {app_name}/urls.py  
+django_project/urls.py points to {app name}/urls.py which then
+points to {app name}/views.py.  
+example:  
+#blog/urls.py  
+from django.urls import path  
+#import views existing in the same folder.  
+from .views import BlogListView  
+urlpatterns = [path("", BlogListView.as_view(), name="home"),]  
