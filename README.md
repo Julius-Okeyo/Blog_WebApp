@@ -83,3 +83,17 @@ class BlogListView(ListView):
 model = Post  
 template_name = "home.html"  
 ### Create Templates
+#### Update settings.py to identify created templates folder
+### Create static folder with static files
+#### Edit settings.py; add STATIC_URL = "/static/" STATICFILES_DIRS = [BASE_DIR / "static"]
+#### Edit templates to load static files
+example:  
+<!-- templates/base.html -->  
+{% load static %}  
+<html>  
+<head>  
+<title>Django blog</title>  
+<link rel="stylesheet" href="{% static 'css/base.css' %}">  
+</head>  
+...  
+
