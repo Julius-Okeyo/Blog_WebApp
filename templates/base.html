@@ -11,6 +11,9 @@
  <header>
  <h1><a href="{% url 'home' %}">Django blog</a></h1>
  </header>
+ <div class="nav-left">
+ <a href="{% url 'post_new' %}">+ New Blog Post</a>
+ </div>   
  <div>
  {% block content %}
  {% endblock content %}
