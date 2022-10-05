@@ -28,7 +28,7 @@ new app's Config class accessible through {app name}/apps.py.
 python manage.py migrate
 #### 8. Create a database model.
 example:  
-#blog/models.py
+#blog/models.py  
 from django.db import models  
 from django.urls import reverse  
 
